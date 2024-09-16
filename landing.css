@@ -1,0 +1,25 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Fullscreen styling */
+  body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dae2df;
+    overflow: hidden;
+    transition: opacity 1s ease;  /* Smooth transition for fade-out */
+  }
+  
+  /* Video Styling */
+  .landing-page video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ensure the video covers the screen */
+  }
+  

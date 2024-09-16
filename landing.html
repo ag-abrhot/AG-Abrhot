@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+  <!-- Landing Page Video -->
+  <div class="landing-page">
+    <video autoplay muted playsinline id="landingVideo">
+      <source src="landingMotion.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- JavaScript to handle transition -->
+  <script>
+    // Get the video element
+    const video = document.getElementById('landingVideo');
+
+    // Redirect to index.html after video ends
+    video.addEventListener('ended', function() {
+      document.body.style.transition = 'opacity 1s';  // Fade out effect
+      document.body.style.opacity = 0;  // Fade out
+      setTimeout(() => {
+        window.location.href = 'index.html';  // Redirect to homepage
+      }, 1000);  // Wait for fade-out to complete
+    });
+
+    // Optional fallback: In case the video doesn’t play or ends early, set a timeout
+    setTimeout(() => {
+      document.body.style.opacity = 0;  // Fade out
+      setTimeout(() => {
+        window.location.href = 'index.html';  // Redirect after a delay
+      }, 1000);
+    }, 8000);  // Adjust the time as needed, for example, 8000ms = 8 seconds
+  </script>
+</body>
+</html>
