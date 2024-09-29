@@ -1,3 +1,4 @@
+// NAV BAR //
 // Select the menu-toggle button and the nav ul
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('nav ul');

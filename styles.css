@@ -71,7 +71,7 @@ body {
   color: #4c212a; /* Accent color on hover */
 }
 
-/* Hamburger Icon - Initially hidden */
+/* Hamburger Icon -Initially hidden */
 .menu-toggle {
   display: none; /* Hidden by default */
   cursor: pointer;
@@ -81,6 +81,7 @@ body {
   padding: 10px;
   border-radius: 5px;
 }
+
 
 /* Media Query for Smaller Devices */
 @media (max-width: 768px) {
