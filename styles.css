@@ -60,15 +60,15 @@ body {
 
 .navbar nav ul li a {
   font-family: 'Montserrat', sans-serif;
-  color: #fffbff; /* Text color */
+  color: #1a535c; /* Text color */
   text-decoration: none;
-  font-weight: 600; /* Change to a normal weight */
+  font-weight: 1010; /* Change to a normal weight */
   font-size: 18px;
   transition: color 0.3s ease;
 }
 
 .navbar nav ul li a:hover {
-  color: #fffbff; /* Accent color on hover */
+  color: #4c212a; /* Accent color on hover */
 }
 
 /* Hamburger Icon */
