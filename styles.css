@@ -26,8 +26,8 @@ body {
 
 /* Navigation Bar */
 .navbar {
-  background-color: #dae2df; /* background color */
-  padding: 2px 0;
+  background-color: #dae2df; /* Updated background color */
+  padding: 5px 0; /* Smaller padding */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -60,28 +60,29 @@ body {
 
 .navbar nav ul li a {
   font-family: 'Montserrat', sans-serif;
-  color: #1a535c; /* White text */
+  color: #fffbff; /* Text color */
   text-decoration: none;
-  font-weight: 1100;
+  font-weight: 600; /* Change to a normal weight */
   font-size: 18px;
   transition: color 0.3s ease;
 }
 
 .navbar nav ul li a:hover {
-  color: #4c212a; /* Accent color on hover */
+  color: #fffbff; /* Accent color on hover */
 }
 
-/* Hamburger Icon -Initially hidden */
+/* Hamburger Icon */
 .menu-toggle {
   display: none; /* Hidden by default */
   cursor: pointer;
-  font-size: 18px;
-  background-color: #1a535c;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
+  font-size: 16px; /* Smaller font size for the toggle */
+  background-color: #4c212a; /* Updated background color for the toggle */
+  color: white; /* Text color for the toggle */
+  padding: 8px; /* Smaller padding for the toggle */
+  border-radius: 5px; /* Rounded corners for the toggle */
+  position: absolute; /* Position it absolutely */
+  right: 10px; /* Place it on the right */
 }
-
 
 /* Media Query for Smaller Devices */
 @media (max-width: 768px) {
@@ -101,71 +102,59 @@ body {
     width: 100%;
   }
 
-  /* Display the menu-toggle button on smaller screens */
+  /* Show the menu-toggle button on smaller screens */
   .menu-toggle {
-    display: block;
+    display: block; /* Show the hamburger icon */
   }
 
   /* When the "active" class is added, display the navigation links */
   .navbar nav ul.active {
     display: flex; /* Show navigation when active (via JavaScript toggle) */
-    flex-direction: column;
-    width: 100%;
-    gap: 15px;
   }
-}
-
-/* Hamburger Icon */
-.menu-toggle {
-  display: none; /* Hidden by default */
-}
-
-.menu-toggle.active + ul {
-  display: flex;
 }
 
 /* Index Introduction Section */
 .intro {
-    text-align: center;
-    padding: 40px 0;
-  }
-  
-  .intro h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .intro p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    text-align: left;
-  }
+  text-align: center;
+  padding: 40px 0;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
 
 /* Contact Section */
 .contact {
-    background-color: #fffbff; /* Light background to match other sections */
-    color: #333; /* Text color */
-    padding: 40px 0;
-    text-align: center;
-  }
-  
-  .contact p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-  
-  .contact a {
-    color: #1a535c; /* Color for links */
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  .contact a:hover {
-    color: #4c212a; /* Change color on hover */
-  }
-  
+  background-color: #fffbff; /* Light background to match other sections */
+  color: #333; /* Text color */
+  padding: 40px 0;
+  text-align: center;
+}
+
+.contact p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.contact a {
+  color: #1a535c; /* Color for links */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.contact a:hover {
+  color: #4c212a; /* Change color on hover */
+}
+
 /* Footer Style */
 footer {
   background-color: #4c212a;
