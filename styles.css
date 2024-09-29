@@ -27,7 +27,7 @@ body {
 /* Navigation Bar */
 .navbar {
   background-color: #dae2df; /* background color */
-  padding: 10px 0;
+  padding: 2px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -43,7 +43,6 @@ body {
 .navbar .logo img {
   height: 180px; /* Increased logo size */
   width: auto;
-  display: block;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -56,7 +55,7 @@ body {
 .navbar nav ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 
 .navbar nav ul li a {
@@ -64,12 +63,64 @@ body {
   color: #1a535c; /* White text */
   text-decoration: none;
   font-weight: 1100;
-  font-size: 20px;
+  font-size: 18px;
   transition: color 0.3s ease;
 }
 
 .navbar nav ul li a:hover {
   color: #4c212a; /* Accent color on hover */
+}
+
+/* Hamburger Icon - Initially hidden */
+.menu-toggle {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  font-size: 18px;
+  background-color: #1a535c;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Media Query for Smaller Devices */
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .logo img {
+    height: 80px; /* Reduce logo size for smaller screens */
+  }
+
+  /* Hide the navigation links initially on smaller screens */
+  .navbar nav ul {
+    display: none; /* Initially hide the navigation */
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Display the menu-toggle button on smaller screens */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* When the "active" class is added, display the navigation links */
+  .navbar nav ul.active {
+    display: flex; /* Show navigation when active (via JavaScript toggle) */
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+}
+
+/* Hamburger Icon */
+.menu-toggle {
+  display: none; /* Hidden by default */
+}
+
+.menu-toggle.active + ul {
+  display: flex;
 }
 
 /* Index Introduction Section */
@@ -87,22 +138,6 @@ body {
     font-size: 1.2rem;
     margin-bottom: 20px;
     text-align: left;
-  }
-
-  
-  .responsive-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Ensure the image covers the container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
-  }
-  
-  /* Make images stack on smaller screens */
-  @media (max-width: 768px) {
-    .column {
-      flex: 1 1 100%; /* Make each column take full width on smaller screens */
-      max-width: 100%;
-    }
   }
 
 /* Contact Section */
@@ -128,13 +163,6 @@ body {
   
   .contact a:hover {
     color: #4c212a; /* Change color on hover */
-  }
-  
-  /* Spacing for larger devices */
-  @media (min-width: 768px) {
-    .contact {
-      padding: 60px 0;
-    }
   }
   
 /* Footer Style */
